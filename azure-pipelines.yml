@@ -11,13 +11,13 @@ variables:
   azureServiceConnectionId: '03e6a5c1-cbd4-453b-ae8f-401d7a531956'
 
   # Web app name
-  webAppName: 'testmlexercise'
+  webAppName: 'mlexercisetest'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: 'testmlexercise'
+  environmentName: 'mlexercisetest'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
@@ -80,7 +80,7 @@ stages:
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : testmlexercise'
+            displayName: 'Deploy Azure Web App : mlexercisetest'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
